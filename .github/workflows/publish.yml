@@ -1,0 +1,87 @@
+name: Publish New Posts
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/posts/**.md'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Detect new posts
+        id: detect
+        run: |
+          NEW_POSTS=$(git diff --name-only --diff-filter=A HEAD~1 HEAD -- src/posts/)
+          echo "new_posts=$NEW_POSTS" >> $GITHUB_OUTPUT
+          if [ -z "$NEW_POSTS" ]; then
+            echo "No new posts detected (edit only). Skipping."
+          else
+            echo "New posts detected:"
+            echo "$NEW_POSTS"
+          fi
+
+      - name: Parse and cross-post
+        if: steps.detect.outputs.new_posts != ''
+        env:
+          PUBLISH_ENABLED: ${{ vars.PUBLISH_ENABLED }}
+          DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
+          SITE_URL: https://USERNAME.github.io/blogposts
+        run: |
+          # Master switch — set PUBLISH_ENABLED=true in repo Variables to go live
+          if [ "$PUBLISH_ENABLED" != "true" ]; then
+            echo "🔒 Dry run mode (PUBLISH_ENABLED is not set to true)."
+            echo "   Set it in: repo Settings → Secrets and variables → Variables"
+            echo "   The following would have been published:"
+          fi
+
+          for FILE in ${{ steps.detect.outputs.new_posts }}; do
+            echo ""
+            echo "📄 File: $FILE"
+
+            TITLE=$(grep -m1 '^title:' "$FILE" | sed 's/title: *//;s/^"//;s/"$//')
+            CROSSPOST=$(grep -m1 '^crosspost:' "$FILE" | sed 's/crosspost: *//')
+            SLUG=$(basename "$FILE" .md)
+            CANONICAL="$SITE_URL/posts/$SLUG"
+
+            echo "   Title:     $TITLE"
+            echo "   Canonical: $CANONICAL"
+            echo "   Crosspost: $CROSSPOST"
+
+            if [ "$CROSSPOST" != "true" ]; then
+              echo "   ⏭  Skipping — crosspost: true not set in frontmatter."
+              continue
+            fi
+
+            TAGS_RAW=$(grep -m1 '^tags:' "$FILE" | sed 's/tags: *\[//;s/\]//')
+            TAGS_JSON=$(echo "$TAGS_RAW" | sed 's/ *, */","/g;s/^/["/;s/$/"]/;s/ //g')
+            BODY=$(awk '/^---/{n++; if(n==2){found=1; next}} found' "$FILE")
+
+            # dev.to
+            if [ "$PUBLISH_ENABLED" != "true" ]; then
+              echo "   🔵 [DRY RUN] Would POST to dev.to with canonical: $CANONICAL"
+            elif [ -n "$DEVTO_API_KEY" ]; then
+              echo "   🔵 Publishing to dev.to..."
+              PAYLOAD=$(jq -n \
+                --arg title "$TITLE" \
+                --arg body "$BODY" \
+                --arg canonical "$CANONICAL" \
+                --argjson tags "$TAGS_JSON" \
+                '{article: {title: $title, body_markdown: $body, published: true, canonical_url: $canonical, tags: $tags}}')
+
+              RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" \
+                -X POST https://dev.to/api/articles \
+                -H "api-key: $DEVTO_API_KEY" \
+                -H "Content-Type: application/json" \
+                -d "$PAYLOAD")
+
+              echo "   dev.to response: $RESPONSE"
+            else
+              echo "   ⚠️  DEVTO_API_KEY not set — skipping dev.to."
+            fi
+          done
