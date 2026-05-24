@@ -29,6 +29,9 @@ export default function Layout() {
             The Context
           </Anchor>
           <Group gap="xs">
+            <Anchor component={Link} to="/about" underline="never" c="dimmed" size="sm" fw={500}>
+              About
+            </Anchor>
             <ActionIcon component="a" href="/blogposts/rss.xml" target="_blank" variant="subtle" size="lg" aria-label="RSS feed">
               <IconRss size={18} />
             </ActionIcon>
