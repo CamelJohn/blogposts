@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My Blog</title>
-    <link>https://USERNAME.github.io/blogposts</link>
-    <description>Thoughts on AI and software.</description>
+    <title>The Context</title>
+    <link>https://cameljohn.github.io/blogposts</link>
+    <description>Observations and takes on AI, context engineering, and everything in between.</description>
     <language>en-us</language>
     <lastBuildDate>Sun, 24 May 2026 00:00:00 GMT</lastBuildDate>
-    <atom:link href="https://USERNAME.github.io/blogposts/rss.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://cameljohn.github.io/blogposts/rss.xml" rel="self" type="application/rss+xml"/>
     
   <item>
     <title>Hello World</title>
-    <link>https://USERNAME.github.io/blogposts/posts/2026-05-24-hello-world</link>
-    <guid>https://USERNAME.github.io/blogposts/posts/2026-05-24-hello-world</guid>
+    <link>https://cameljohn.github.io/blogposts/posts/2026-05-24-hello-world</link>
+    <guid>https://cameljohn.github.io/blogposts/posts/2026-05-24-hello-world</guid>
     <pubDate>Sun, 24 May 2026 00:00:00 GMT</pubDate>
     <description>The first post on this blog.</description>
     <category>meta</category>
   </item>
   <item>
     <title>How AI Agents Actually Work</title>
-    <link>https://USERNAME.github.io/blogposts/posts/2026-05-20-ai-agent-architecture</link>
-    <guid>https://USERNAME.github.io/blogposts/posts/2026-05-20-ai-agent-architecture</guid>
+    <link>https://cameljohn.github.io/blogposts/posts/2026-05-20-ai-agent-architecture</link>
+    <guid>https://cameljohn.github.io/blogposts/posts/2026-05-20-ai-agent-architecture</guid>
     <pubDate>Wed, 20 May 2026 00:00:00 GMT</pubDate>
     <description>A practical look at the architecture behind AI agents — the loop, the tools, and how they chain decisions into actions.</description>
     <category>ai</category>
@@ -27,8 +27,8 @@
   </item>
   <item>
     <title>Building with React in 2026</title>
-    <link>https://USERNAME.github.io/blogposts/posts/2026-05-10-building-with-react</link>
-    <guid>https://USERNAME.github.io/blogposts/posts/2026-05-10-building-with-react</guid>
+    <link>https://cameljohn.github.io/blogposts/posts/2026-05-10-building-with-react</link>
+    <guid>https://cameljohn.github.io/blogposts/posts/2026-05-10-building-with-react</guid>
     <pubDate>Sun, 10 May 2026 00:00:00 GMT</pubDate>
     <description>React keeps evolving. Here&apos;s what the modern React stack looks like today and why I still reach for it.</description>
     <category>react</category>
@@ -36,8 +36,8 @@
   </item>
   <item>
     <title>TypeScript Tips I Wish I Knew Earlier</title>
-    <link>https://USERNAME.github.io/blogposts/posts/2026-04-20-typescript-tips</link>
-    <guid>https://USERNAME.github.io/blogposts/posts/2026-04-20-typescript-tips</guid>
+    <link>https://cameljohn.github.io/blogposts/posts/2026-04-20-typescript-tips</link>
+    <guid>https://cameljohn.github.io/blogposts/posts/2026-04-20-typescript-tips</guid>
     <pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate>
     <description>A handful of TypeScript patterns that cleaned up my code and made my teammates stop asking questions.</description>
     <category>typescript</category>
@@ -45,8 +45,8 @@
   </item>
   <item>
     <title>CSS Features You Probably Aren&apos;t Using</title>
-    <link>https://USERNAME.github.io/blogposts/posts/2026-04-01-css-you-dont-know</link>
-    <guid>https://USERNAME.github.io/blogposts/posts/2026-04-01-css-you-dont-know</guid>
+    <link>https://cameljohn.github.io/blogposts/posts/2026-04-01-css-you-dont-know</link>
+    <guid>https://cameljohn.github.io/blogposts/posts/2026-04-01-css-you-dont-know</guid>
     <pubDate>Wed, 01 Apr 2026 00:00:00 GMT</pubDate>
     <description>Container queries, cascade layers, and a few other CSS features that are now safe to use and genuinely useful.</description>
     <category>css</category>
@@ -54,8 +54,8 @@
   </item>
   <item>
     <title>Vite Config Tips for Real Projects</title>
-    <link>https://USERNAME.github.io/blogposts/posts/2026-03-15-vite-config-tips</link>
-    <guid>https://USERNAME.github.io/blogposts/posts/2026-03-15-vite-config-tips</guid>
+    <link>https://cameljohn.github.io/blogposts/posts/2026-03-15-vite-config-tips</link>
+    <guid>https://cameljohn.github.io/blogposts/posts/2026-03-15-vite-config-tips</guid>
     <pubDate>Sun, 15 Mar 2026 00:00:00 GMT</pubDate>
     <description>Vite works great out of the box but a few config tweaks make a big difference on larger projects.</description>
     <category>vite</category>
@@ -64,8 +64,8 @@
   </item>
   <item>
     <title>What Makes a Good Design System</title>
-    <link>https://USERNAME.github.io/blogposts/posts/2026-02-28-design-systems</link>
-    <guid>https://USERNAME.github.io/blogposts/posts/2026-02-28-design-systems</guid>
+    <link>https://cameljohn.github.io/blogposts/posts/2026-02-28-design-systems</link>
+    <guid>https://cameljohn.github.io/blogposts/posts/2026-02-28-design-systems</guid>
     <pubDate>Sat, 28 Feb 2026 00:00:00 GMT</pubDate>
     <description>After working with several design systems, here&apos;s what separates the ones that help from the ones that get abandoned.</description>
     <category>design</category>
