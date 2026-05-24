@@ -3,7 +3,7 @@ title: "Building with React in 2026"
 date: 2026-05-10
 tags: [react, javascript]
 excerpt: "React keeps evolving. Here's what the modern React stack looks like today and why I still reach for it."
-draft: false
+draft: true
 ---
 
 # Building with React in 2026

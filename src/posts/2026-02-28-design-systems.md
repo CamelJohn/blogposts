@@ -3,7 +3,7 @@ title: "What Makes a Good Design System"
 date: 2026-02-28
 tags: [design, css]
 excerpt: "After working with several design systems, here's what separates the ones that help from the ones that get abandoned."
-draft: false
+draft: true
 ---
 
 # What Makes a Good Design System

@@ -3,7 +3,7 @@ title: "Vite Config Tips for Real Projects"
 date: 2026-03-15
 tags: [vite, javascript, tooling]
 excerpt: "Vite works great out of the box but a few config tweaks make a big difference on larger projects."
-draft: false
+draft: true
 ---
 
 # Vite Config Tips for Real Projects

@@ -3,7 +3,7 @@ title: "How AI Agents Actually Work"
 date: 2026-05-20
 tags: [ai, agents]
 excerpt: "A practical look at the architecture behind AI agents — the loop, the tools, and how they chain decisions into actions."
-draft: false
+draft: true
 ---
 
 # How AI Agents Actually Work

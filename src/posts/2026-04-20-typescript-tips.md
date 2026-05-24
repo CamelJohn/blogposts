@@ -3,7 +3,7 @@ title: "TypeScript Tips I Wish I Knew Earlier"
 date: 2026-04-20
 tags: [typescript, javascript]
 excerpt: "A handful of TypeScript patterns that cleaned up my code and made my teammates stop asking questions."
-draft: false
+draft: true
 ---
 
 # TypeScript Tips I Wish I Knew Earlier
