@@ -33,10 +33,10 @@ export default function Home() {
             backgroundClip: 'text',
           }}
         >
-          My Blog
+          The Context
         </Title>
         <Text c="dimmed" size="lg">
-          Thoughts on AI, software, and everything in between.
+          Observations and takes on AI, context engineering, and everything in between.
         </Text>
       </Stack>
 

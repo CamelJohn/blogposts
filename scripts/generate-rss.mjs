@@ -5,9 +5,9 @@ import { fileURLToPath } from 'url'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
 // ── Update these to match your site ──────────────────────────────────────────
-const SITE_URL = 'https://USERNAME.github.io/blogposts'
-const SITE_TITLE = 'My Blog'
-const SITE_DESCRIPTION = 'Thoughts on AI and software.'
+const SITE_URL = 'https://cameljohn.github.io/blogposts'
+const SITE_TITLE = 'The Context'
+const SITE_DESCRIPTION = 'Observations and takes on AI, context engineering, and everything in between.'
 // ─────────────────────────────────────────────────────────────────────────────
 
 function parseFrontmatter(raw) {

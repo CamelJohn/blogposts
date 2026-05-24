@@ -31,7 +31,7 @@ jobs:
         env:
           PUBLISH_ENABLED: ${{ vars.PUBLISH_ENABLED }}
           DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
-          SITE_URL: https://USERNAME.github.io/blogposts
+          SITE_URL: https://cameljohn.github.io/blogposts
         run: |
           # Master switch — set PUBLISH_ENABLED=true in repo Variables to go live
           if [ "$PUBLISH_ENABLED" != "true" ]; then

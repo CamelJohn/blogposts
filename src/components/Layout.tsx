@@ -26,7 +26,7 @@ export default function Layout() {
               backgroundClip: 'text',
             }}
           >
-            My Blog
+            The Context
           </Anchor>
           <Group gap="xs">
             <ActionIcon component="a" href="/blogposts/rss.xml" target="_blank" variant="subtle" size="lg" aria-label="RSS feed">
