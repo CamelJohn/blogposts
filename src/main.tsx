@@ -7,9 +7,10 @@ import App from './App'
 
 const theme = createTheme({
   primaryColor: 'violet',
-  fontFamily: 'Inter, system-ui, sans-serif',
+  fontFamily: '"DM Sans", system-ui, sans-serif',
+  fontFamilyMonospace: '"IBM Plex Mono", monospace',
   headings: {
-    fontFamily: 'Inter, system-ui, sans-serif',
+    fontFamily: '"DM Sans", system-ui, sans-serif',
     fontWeight: '700',
   },
   defaultRadius: 'md',

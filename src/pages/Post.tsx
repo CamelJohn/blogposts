@@ -18,19 +18,27 @@ export default function Post() {
   }
 
   return (
-    <Stack gap="md">
+    <Stack gap="lg" maw={680} mx="auto">
       <Anchor component={Link} to="/" c="dimmed" size="sm" style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
         <IconArrowLeft size={14} /> All posts
       </Anchor>
-      <Title>{post.title}</Title>
-      <Group gap="sm">
-        <Text c="dimmed" size="sm">
-          {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-        </Text>
-        {post.tags.map(tag => (
-          <Badge key={tag} variant="light" size="sm">{tag}</Badge>
-        ))}
-      </Group>
+
+      <Stack gap="sm">
+        <Title order={1} style={{ lineHeight: 1.2, fontSize: 'clamp(1.6rem, 4vw, 2.2rem)' }}>
+          {post.title}
+        </Title>
+        <Group gap="xs" align="center">
+          <Text c="dimmed" size="sm">
+            {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+          </Text>
+          <Text c="dimmed" size="sm">·</Text>
+          <Text c="dimmed" size="sm">{post.readTime} min read</Text>
+          {post.tags.map(tag => (
+            <Badge key={tag} variant="light" size="sm" radius="sm">{tag}</Badge>
+          ))}
+        </Group>
+      </Stack>
+
       <PostBody content={post.content} />
     </Stack>
   )

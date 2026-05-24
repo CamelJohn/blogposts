@@ -4,6 +4,7 @@ import remarkGfm from 'remark-gfm'
 import rehypeRaw from 'rehype-raw'
 import { codeToHtml } from 'shiki'
 import { Typography, useComputedColorScheme, ActionIcon, Tooltip } from '@mantine/core'
+import styles from './PostBody.module.css'
 import { useClipboard } from '@mantine/hooks'
 import { IconCopy, IconCheck } from '@tabler/icons-react'
 import type { Components } from 'react-markdown'
@@ -82,9 +83,11 @@ export default function PostBody({ content }: { content: string }) {
 
   return (
     <Typography>
-      <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]} components={components}>
-        {content}
-      </ReactMarkdown>
+      <div className={styles.prose}>
+        <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]} components={components}>
+          {content}
+        </ReactMarkdown>
+      </div>
     </Typography>
   )
 }

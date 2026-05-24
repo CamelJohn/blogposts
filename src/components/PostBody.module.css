@@ -1,0 +1,160 @@
+.prose {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: inherit;
+}
+
+/* Headings */
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--mantine-color-text);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.prose h1 { font-size: 2rem; }
+
+.prose h2 {
+  font-size: 1.4rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--mantine-color-default-border);
+}
+
+.prose h3 { font-size: 1.15rem; }
+.prose h4 { font-size: 1rem; }
+
+/* Paragraphs */
+.prose p {
+  margin: 0 0 1.4rem;
+}
+
+/* Horizontal rule */
+.prose hr {
+  border: none;
+  border-top: 2px solid var(--mantine-color-default-border);
+  margin: 2.5rem 0;
+}
+
+/* Blockquote */
+.prose blockquote {
+  border-left: 3px solid var(--mantine-color-violet-5);
+  margin: 1.5rem 0;
+  padding: 0.75rem 1.25rem;
+  color: var(--mantine-color-dimmed);
+  font-style: italic;
+  background: var(--mantine-color-violet-light);
+  border-radius: 0 var(--mantine-radius-sm) var(--mantine-radius-sm) 0;
+}
+
+.prose blockquote p {
+  margin: 0;
+}
+
+.prose blockquote strong {
+  color: var(--mantine-color-violet-6);
+  font-style: normal;
+}
+
+/* Lists */
+.prose ul,
+.prose ol {
+  margin: 0 0 1.4rem;
+  padding-left: 1.75rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+}
+
+.prose li::marker {
+  color: var(--mantine-color-violet-5);
+}
+
+/* Inline code */
+.prose code {
+  font-family: "IBM Plex Mono", var(--mantine-font-family-monospace);
+  font-size: 0.875em;
+  padding: 0.15em 0.45em;
+  border-radius: 4px;
+  background: var(--mantine-color-default-hover);
+  color: var(--mantine-color-violet-6);
+}
+
+/* Code blocks — let Shiki handle the look, just handle spacing */
+.prose pre {
+  margin: 0 0 1.75rem;
+  border-radius: var(--mantine-radius-md);
+  overflow: hidden;
+}
+
+.prose pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* Links */
+.prose a {
+  color: var(--mantine-color-violet-6);
+  text-decoration: underline;
+  text-decoration-color: var(--mantine-color-violet-3);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 150ms ease;
+}
+
+.prose a:hover {
+  text-decoration-color: var(--mantine-color-violet-6);
+}
+
+/* Strong */
+.prose strong {
+  font-weight: 700;
+  color: var(--mantine-color-text);
+}
+
+/* Images */
+.prose img {
+  max-width: 100%;
+  border-radius: var(--mantine-radius-md);
+  margin: 1rem 0;
+}
+
+/* Tables */
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.4rem;
+  font-size: 0.9rem;
+}
+
+.prose th,
+.prose td {
+  padding: 0.6rem 0.9rem;
+  border: 1px solid var(--mantine-color-default-border);
+  text-align: left;
+}
+
+.prose th {
+  background: var(--mantine-color-default-hover);
+  font-weight: 600;
+  color: var(--mantine-color-text);
+}
+
+/* First element shouldn't have top margin */
+.prose > *:first-child {
+  margin-top: 0;
+}
+
+/* Prevent Typography from adding hover color changes to headings */
+.prose h1:hover,
+.prose h2:hover,
+.prose h3:hover,
+.prose h4:hover {
+  color: var(--mantine-color-text);
+}
