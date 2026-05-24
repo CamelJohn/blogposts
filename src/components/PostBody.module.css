@@ -115,7 +115,7 @@
 /* Strong */
 .prose strong {
   font-weight: 700;
-  color: var(--mantine-color-text);
+  color: var(--mantine-color-violet-6);
 }
 
 /* Images */
